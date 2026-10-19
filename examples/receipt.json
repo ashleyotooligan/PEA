@@ -1,0 +1,112 @@
+{
+  "schema": "pea/receipt/1",
+  "synthetic": true,
+  "signature": null,
+  "sha256": "430b6f9ccc0473cf2053d6f4ff5e49686a973f7a9d3a3c345c4fdacbf1bfe5b5",
+  "payload": {
+    "id": "first-light",
+    "title": "First Light",
+    "symbol": "SPROUT",
+    "mint": "demo:mint:sprout",
+    "question": "What happened before the first burst of buys?",
+    "window": "810000–810007",
+    "coverage": "All bundled events",
+    "gaps": [],
+    "events": [
+      {
+        "id": "demo:tx:00",
+        "slot": 810000,
+        "kind": "create",
+        "actor": "creator",
+        "target": "curve",
+        "sol": "0.000",
+        "note": "Mint and curve appear in the fixture."
+      },
+      {
+        "id": "demo:tx:01",
+        "slot": 810001,
+        "kind": "fund",
+        "actor": "source",
+        "target": "alpha",
+        "sol": "0.900",
+        "note": "Source funds alpha."
+      },
+      {
+        "id": "demo:tx:02",
+        "slot": 810001,
+        "kind": "fund",
+        "actor": "source",
+        "target": "beta",
+        "sol": "0.600",
+        "note": "The same source funds beta."
+      },
+      {
+        "id": "demo:tx:03",
+        "slot": 810002,
+        "kind": "buy",
+        "actor": "alpha",
+        "target": "curve",
+        "sol": "0.420",
+        "note": "First observed buy in this bundle."
+      },
+      {
+        "id": "demo:tx:04",
+        "slot": 810003,
+        "kind": "buy",
+        "actor": "beta",
+        "target": "curve",
+        "sol": "0.280",
+        "note": "A second buyer follows."
+      },
+      {
+        "id": "demo:tx:05",
+        "slot": 810004,
+        "kind": "buy",
+        "actor": "gamma",
+        "target": "curve",
+        "sol": "0.170",
+        "note": "A separate buyer enters."
+      },
+      {
+        "id": "demo:tx:06",
+        "slot": 810007,
+        "kind": "sell",
+        "actor": "alpha",
+        "target": "curve",
+        "sol": "0.110",
+        "note": "Alpha sells in the displayed window."
+      }
+    ],
+    "claims": [
+      {
+        "id": "C-01",
+        "status": "observed",
+        "text": "Alpha and beta receive SOL from the same source.",
+        "evidence": [
+          "demo:tx:01",
+          "demo:tx:02"
+        ],
+        "limit": "The source's operator is unknown."
+      },
+      {
+        "id": "C-02",
+        "status": "inferred",
+        "text": "Shared funding is relevant context for the early buys.",
+        "evidence": [
+          "demo:tx:01",
+          "demo:tx:02",
+          "demo:tx:03",
+          "demo:tx:04"
+        ],
+        "limit": "Funding alone does not establish common control."
+      },
+      {
+        "id": "C-03",
+        "status": "unknown",
+        "text": "The buyers' relationship cannot be resolved from this window.",
+        "evidence": [],
+        "limit": "No identity attribution is supplied."
+      }
+    ]
+  }
+}

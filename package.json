@@ -1,0 +1,16 @@
+{
+  "name": "pea-design",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "PEA — Pump Engineer Everything. An evidence-led Pump.fun agent design and visual workbench.",
+  "author": "Ashley Tooligan",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "screenshots": "node scripts/capture.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

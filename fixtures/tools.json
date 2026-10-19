@@ -1,0 +1,12 @@
+{
+  "schema": "pea/tool-catalog/1",
+  "status": "proposed-contracts",
+  "tools": [
+    {"name":"pea.inspect_launch","role":"Create an evidence window","output":"launch dossier","access":"read"},
+    {"name":"pea.decode_event","role":"Decode with a pinned schema","output":"normalized event","access":"read"},
+    {"name":"pea.map_routes","role":"Map observed wallet transfers","output":"labeled graph","access":"read"},
+    {"name":"pea.challenge_claim","role":"Look for counterevidence","output":"claim revision","access":"reason"},
+    {"name":"pea.rehearse_plan","role":"Evaluate a hypothetical plan","output":"policy decision","access":"sandbox"},
+    {"name":"pea.export_receipt","role":"Package provenance and limits","output":"case receipt","access":"local"}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PEA synthetic design case",
+  "type": "object",
+  "required": ["id","title","symbol","mint","question","window","coverage","gaps","events","claims"],
+  "properties": {
+    "id": {"type":"string"},
+    "title": {"type":"string"},
+    "symbol": {"type":"string"},
+    "mint": {"type":"string","pattern":"^demo:"},
+    "question": {"type":"string"},
+    "window": {"type":"string"},
+    "coverage": {"type":"string"},
+    "gaps": {"type":"array","items":{"type":"string"}},
+    "events": {"type":"array","minItems":1,"items":{"$ref":"event.schema.json"}},
+    "claims": {"type":"array","items":{"$ref":"claim.schema.json"}}
+  },
+  "additionalProperties": false
+}

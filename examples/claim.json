@@ -1,0 +1,7 @@
+{
+  "id": "C-02",
+  "status": "inferred",
+  "text": "Shared funding is relevant context for the early buys.",
+  "evidence": ["demo:tx:01", "demo:tx:02", "demo:tx:03", "demo:tx:04"],
+  "limit": "Funding alone does not establish common control."
+}

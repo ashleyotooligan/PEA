@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PEA proposed tool-call envelope",
+  "$comment": "A document contract, not a transport or registered server.",
+  "type": "object",
+  "required": ["tool","input"],
+  "properties": {
+    "tool": {"enum":["pea.inspect_launch","pea.decode_event","pea.map_routes","pea.challenge_claim","pea.rehearse_plan","pea.export_receipt"]},
+    "input": {"type":"object"}
+  },
+  "additionalProperties": false
+}

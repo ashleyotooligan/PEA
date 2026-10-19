@@ -1,0 +1,14 @@
+{
+  "schema": "pea/policy/1",
+  "mode": "design-preview",
+  "quote_currency": "SOL",
+  "maximum_proposed_spend_sol": "0.300",
+  "example_proposed_spend_sol": "0.200",
+  "maximum_slippage_bps": 200,
+  "require_complete_window": true,
+  "require_fresh_quote": true,
+  "require_human_review": true,
+  "broadcast_enabled": false,
+  "signing_enabled": false,
+  "note": "Display fixture for a proposed policy gate; no execution engine is connected."
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "pea/plan/1",
+  "synthetic": true,
+  "case_id": "first-light",
+  "intent": "Hypothetical review of a bounded SOL action",
+  "proposed_spend_sol": "0.200",
+  "maximum_spend_sol": "0.300",
+  "slippage_cap_bps": 200,
+  "fresh_quote": null,
+  "authorization": null,
+  "decision": "review_only",
+  "funds_requested_sol": "0.000",
+  "broadcast": false
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PEA local unsigned demo receipt",
+  "type": "object",
+  "required": ["schema","synthetic","signature","sha256","payload"],
+  "properties": {
+    "schema": {"const":"pea/receipt/1"},
+    "synthetic": {"const":true},
+    "signature": {"type":"null"},
+    "sha256": {"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "payload": {"$ref":"case.schema.json"}
+  },
+  "additionalProperties": false
+}

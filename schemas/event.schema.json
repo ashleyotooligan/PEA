@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PEA display event",
+  "$comment": "Design fixture schema, not a Pump.fun instruction ABI.",
+  "type": "object",
+  "required": ["id","slot","kind","actor","target","sol","note"],
+  "properties": {
+    "id": {"type":"string","minLength":1},
+    "slot": {"type":"integer","minimum":0},
+    "kind": {"enum":["create","fund","buy","sell"]},
+    "actor": {"type":"string"},
+    "target": {"type":"string"},
+    "sol": {"type":"string","pattern":"^[0-9]+(\\.[0-9]{1,9})?$"},
+    "note": {"type":"string"}
+  },
+  "additionalProperties": false
+}

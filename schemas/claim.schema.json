@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PEA evidence-linked claim",
+  "type": "object",
+  "required": ["id","status","text","evidence","limit"],
+  "properties": {
+    "id": {"type":"string"},
+    "status": {"enum":["observed","inferred","unknown"]},
+    "text": {"type":"string","minLength":1},
+    "evidence": {"type":"array","items":{"type":"string"},"uniqueItems":true},
+    "limit": {"type":"string"}
+  },
+  "additionalProperties": false
+}

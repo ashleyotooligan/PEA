@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PEA hypothetical plan display",
+  "type": "object",
+  "required": ["schema","synthetic","case_id","proposed_spend_sol","maximum_spend_sol","decision","broadcast"],
+  "properties": {
+    "schema": {"const":"pea/plan/1"},
+    "synthetic": {"const":true},
+    "case_id": {"type":"string"},
+    "intent": {"type":"string"},
+    "proposed_spend_sol": {"type":"string","pattern":"^[0-9]+(\\.[0-9]{1,9})?$"},
+    "maximum_spend_sol": {"type":"string","pattern":"^[0-9]+(\\.[0-9]{1,9})?$"},
+    "slippage_cap_bps": {"type":"integer","minimum":0,"maximum":10000},
+    "fresh_quote": {"type":"null"},
+    "authorization": {"type":"null"},
+    "decision": {"const":"review_only"},
+    "funds_requested_sol": {"const":"0.000"},
+    "broadcast": {"const":false}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,9 @@
+{
+  "status": "proposed examples; no tools are connected",
+  "calls": [
+    {"tool":"pea.inspect_launch","input":{"target":"demo:mint:sprout","network":"synthetic","window":{"first":810000,"last":810007},"question":"What preceded the first buys?"}},
+    {"tool":"pea.map_routes","input":{"case_id":"first-light","maximum_depth":2}},
+    {"tool":"pea.challenge_claim","input":{"case_id":"first-light","claim_id":"C-02","alternatives":["shared service","shared operator","missing predecessor"]}},
+    {"tool":"pea.export_receipt","input":{"case_id":"first-light","format":"pea/receipt/1"}}
+  ]
+}
